@@ -1,27 +1,39 @@
+import java.util.ArrayList;
+
 public class Telecommande {
 
+    /**
+     * liste des lampes controlees
+     */
+    private ArrayList<Lampe> lampes;
+
     public Telecommande() {
-        throw new Error("code non ecrit");
+        this.lampes = new ArrayList<Lampe>();
     }
 
     public void ajouterLampe(Lampe lampe) {
-        throw new Error("code non ecrit");
+        this.lampes.add(lampe);
     }
 
     public void activerLampe(int indiceLampe) {
-        throw new Error("code non ecrit");
+        this.lampes.get(indiceLampe).allumer();
     }
 
     public void desactiverLampe(int indiceLampe) {
-        throw new Error("code non ecrit");
+        this.lampes.get(indiceLampe).eteindre();
     }
 
     public void activerTout() {
-        throw new Error("code non ecrit");
-    }
+        for (Lampe l : this.lampes) {
+            l.allumer();
+        }
 
-    @Override
+    }
     public String toString() {
-        throw new Error("code non ecrit");
+        String r = "";
+        for (int i = 0; i < this.lampes.size(); i++) {
+            r += i + " " + this.lampes.get(i) + "\n";
+        }
+        return r;
     }
 }
