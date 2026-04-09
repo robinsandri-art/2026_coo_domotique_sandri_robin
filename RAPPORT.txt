@@ -1,1 +1,5 @@
 Pour ajouter la gestion des chaînes hifi, on a introduit une interface Appareil contenant les méthodes communes allumer et eteindre. Les classes Lampe et Hifi implémentent cette interface. La classe Telecommande a été modifiée pour manipuler une liste d’Appareil au lieu de Lampe. Cela permet de gérer plusieurs types d’appareils sans copier du code. Le nombre de lignes modifiées peut être observé avec la commande git diff --stat.
+
+
+Pour permettre à la télécommande de manipuler aussi des télévisions, il ne faut pas ajouter des méthodes spécifiques dans Telecommande.
+La meilleure solution consiste à utiliser une interface commune Appareil, qui définit les méthodes allumer() et eteindre(). Les classes Lampe, Hifi et Television implémentent alors cette interface.
