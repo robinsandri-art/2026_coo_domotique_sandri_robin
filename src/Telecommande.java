@@ -2,9 +2,6 @@ import java.util.ArrayList;
 
 public class Telecommande {
 
-    /**
-     * liste des lampes controlees
-     */
     private ArrayList<Lampe> lampes;
 
     public Telecommande() {
@@ -36,4 +33,7 @@ public class Telecommande {
         }
         return r;
     }
+    public void ajouterHifi(Hifi hifi) {
+    this.appareils.add(hifi);
+}
 }
