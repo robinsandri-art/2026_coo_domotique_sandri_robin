@@ -13,3 +13,7 @@ Oui, le copier-coller peut être utile si la classe Telecommande gère séparém
 La flèche d’association va de Telecommande vers Appareil, car la télécommande dépend des appareils qu’elle manipule. Cela implique que la télécommande doit connaître les méthodes définies par l’interface Appareil. Tant que les appareils respectent cette interface, on peut en ajouter sans modifier Telecommande.
 
 Si la chaîne hifi ne possède plus allumer et eteindre, mais augmenterSon et baisserSon, elle ne respecte plus l’interface Appareil. Elle ne pourra donc plus être utilisée directement par la télécommande.
+
+
+
+La classe Telecommande permet de contrôler plusieurs appareils stockés dans une liste. Ces appareils implémentent une interface commune Appareil, ce qui permet d’utiliser les mêmes méthodes (allumer, eteindre) quel que soit leur type. La télécommande peut ajouter des appareils, les activer ou les désactiver individuellement ou tous ensemble. 
