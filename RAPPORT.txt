@@ -17,3 +17,7 @@ Si la chaîne hifi ne possède plus allumer et eteindre, mais augmenterSon et ba
 
 
 La classe Telecommande permet de contrôler plusieurs appareils stockés dans une liste. Ces appareils implémentent une interface commune Appareil, ce qui permet d’utiliser les mêmes méthodes (allumer, eteindre) quel que soit leur type. La télécommande peut ajouter des appareils, les activer ou les désactiver individuellement ou tous ensemble. 
+
+
+
+Le nouveau diagramme repose sur l’utilisation d’une interface commune Appareil. Cette interface définit les méthodes allumer() et eteindre(), qui sont implémentées par les classes Lampe et Hifi. La télécommande peut manipuler n’importe quel type d’appareil respectant l’interface, sans modification de son code. Cette conception permet d’éviter le copier-coller.
