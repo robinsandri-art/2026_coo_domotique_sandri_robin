@@ -2,38 +2,35 @@ import java.util.ArrayList;
 
 public class Telecommande {
 
-    private ArrayList<Lampe> lampes;
+    private ArrayList<Appareil> appareils;
 
     public Telecommande() {
-        this.lampes = new ArrayList<Lampe>();
+        this.appareils = new ArrayList<Appareil>();
     }
 
-    public void ajouterLampe(Lampe lampe) {
-        this.lampes.add(lampe);
+    public void ajouterAppareil(Appareil appareil) {
+        this.appareils.add(appareil);
     }
 
-    public void activerLampe(int indiceLampe) {
-        this.lampes.get(indiceLampe).allumer();
+    public void activer(int indice) {
+        this.appareils.get(indice).allumer();
     }
 
-    public void desactiverLampe(int indiceLampe) {
-        this.lampes.get(indiceLampe).eteindre();
+    public void desactiver(int indice) {
+        this.appareils.get(indice).eteindre();
     }
 
     public void activerTout() {
-        for (Lampe l : this.lampes) {
-            l.allumer();
+        for (Appareil a : this.appareils) {
+            a.allumer();
         }
-
     }
+
     public String toString() {
         String r = "";
-        for (int i = 0; i < this.lampes.size(); i++) {
-            r += i + " " + this.lampes.get(i) + "\n";
+        for (int i = 0; i < this.appareils.size(); i++) {
+            r += i + " " + this.appareils.get(i) + "\n";
         }
         return r;
     }
-    public void ajouterHifi(Hifi hifi) {
-    this.appareils.add(hifi);
-}
 }
